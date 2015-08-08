@@ -623,6 +623,10 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         [self performLayout];
         [self.view setNeedsLayout];
     }
+
+    if (_gridController) {
+        [_gridController.collectionView reloadData];
+    }
     
 }
 
